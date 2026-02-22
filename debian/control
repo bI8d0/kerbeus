@@ -1,0 +1,41 @@
+Source: kerbeus
+Section: utils
+Priority: optional
+Maintainer: bI8d0 <bI8d0@protonmail.com>
+Homepage: https://github.com/bI8d0/kerbeus
+Vcs-Git: https://github.com/bI8d0/kerbeus.git
+Vcs-Browser: https://github.com/bI8d0/kerbeus
+Standards-Version: 4.6.2
+Build-Depends: debhelper-compat (= 13), golang-go (>= 1.21)
+Rules-Requires-Root: no
+
+Package: kerbeus
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ettercap
+Description: Kerberos AS-REQ & AS-REP Sniffer for security analysis
+ Kerbeus is a specialized packet sniffer for capturing and analyzing Kerberos
+ authentication traffic. It correlates AS-REQ and AS-REP messages to extract
+ Pre-Authentication hashes that can be used for offline password cracking.
+ .
+ Features:
+  * Capture Kerberos AS-REQ and AS-REP packets on port 88/TCP and 88/UDP
+  * Extract Pre-Authentication hashes (PA-ENC-TIMESTAMP)
+  * Support for AES128, AES256, and RC4-HMAC encryption types (etype 17, 18, 23)
+  * Automatic salt extraction from PA-ETYPE-INFO and PA-ETYPE-INFO2
+  * Automatic deduplication to avoid duplicate hashes
+  * John the Ripper compatible hash format ($krb5pa$)
+  * Optional MITM ARP spoofing with ettercap integration
+  * Interactive capture with real-time color-coded output
+  * Automatic correlation of AS-REQ and AS-REP packets by user
+ .
+ Usage:
+  sudo ./kerbeus
+  sudo ./kerbeus -i eth0
+ .
+ Requirements:
+  * Root/sudo permissions (for packet capture)
+  * Linux with AF_PACKET support (Kali Linux recommended)
+  * Ettercap (optional, for MITM ARP spoofing)
+  * Access to Kerberos traffic (usually on port 88)
+
+

@@ -1,0 +1,15 @@
+kerbeus (1.2.0-1) unstable; urgency=medium
+
+  * Kerberos AS-REQ & AS-REP Sniffer for security analysis
+  * Capture and extract Kerberos Pre-Authentication hashes
+  * Support for AES128, AES256, and RC4-HMAC encryption types (etype 17, 18, 23)
+  * Automatic salt extraction from AS-REP (PA-ETYPE-INFO and PA-ETYPE-INFO2)
+  * Automatic deduplication to avoid saving duplicate hashes
+  * John the Ripper compatible hash format
+  * Optional MITM ARP spoofing with ettercap integration
+  * Linux-only support with AF_PACKET for packet capture
+  * Supports both TCP/UDP Kerberos traffic on port 88
+  * Interactive capture with color-coded output
+  * Automatic correlation of AS-REQ and AS-REP packets
+
+ -- bI8d0 <bI8d0@protonmail.com>  Sat, 22 Feb 2026 00:00:00 +0000

@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+# Enable verbose output for debugging
+export DH_VERBOSE = 1
+
+# Use debhelper without golang addon (simpler approach)
+%:
+	dh $@
+
+# Build the Go binary with optimized flags
+override_dh_auto_build:
+	go build -ldflags="-w -s" -o kerbeus main.go
+
+# Install binary to /usr/bin/
+override_dh_auto_install:
+	mkdir -p debian/kerbeus/usr/bin
+	cp kerbeus debian/kerbeus/usr/bin/kerbeus
+	chmod 755 debian/kerbeus/usr/bin/kerbeus
+
+# Skip default tests if any
+override_dh_auto_test:
+	echo "Skipping tests"
+
+# Strip is already done with -s flag in build
+override_dh_strip:
+	# Already stripped with -s flag in build
