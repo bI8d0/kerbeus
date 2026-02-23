@@ -2,6 +2,8 @@
 
 # Enable verbose output for debugging
 export DH_VERBOSE = 1
+export GO111MODULE=on
+export GOPROXY=https://proxy.golang.org,direct
 
 # Use debhelper without golang addon (simpler approach)
 %:
@@ -9,13 +11,19 @@ export DH_VERBOSE = 1
 
 # Build the Go binary with optimized flags
 override_dh_auto_build:
-	go build -ldflags="-w -s" -o kerbeus main.go
+	mv build.go build.back
+	go build -ldflags="-w -s" -o kerbeus main.go 
+	mv build.back build.go
 
-# Install binary to /usr/bin/
+# Install binary to /usr/sbin/
 override_dh_auto_install:
-	mkdir -p debian/kerbeus/usr/bin
-	cp kerbeus debian/kerbeus/usr/bin/kerbeus
-	chmod 755 debian/kerbeus/usr/bin/kerbeus
+	mkdir -p debian/kerbeus/usr/sbin
+	cp kerbeus debian/kerbeus/usr/sbin/kerbeus
+	chmod 755 debian/kerbeus/usr/sbin/kerbeus
+
+override_dh_install:
+	dh_install
+	find debian/kerbeus -name 'build.go' -delete
 
 # Skip default tests if any
 override_dh_auto_test:
