@@ -149,8 +149,8 @@ Press `q` + Enter or `Ctrl+C`
          │ Kerbeus captures it │
          │ Matches with AS-REQ │
          │ Extracts hash & salt│
-         │ Deduplicates       │
-         │ Saves to file      │
+         │ Deduplicates        │
+         │ Saves to file       │
          └─────────────────────┘
 ```
 
