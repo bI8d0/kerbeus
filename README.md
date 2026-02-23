@@ -312,8 +312,30 @@ go build -ldflags="-w -s" -o kerbeus main.go
 ```
 
 ### Build for Debian Package
+
+#### Prerequisites:
 ```bash
+sudo apt-get update
+sudo apt-get install build-essential devscripts debhelper dh-golang golang-go
+```
+
+#### Build the .deb package:
+```bash
+git clone https://github.com/bI8d0/kerbeus.git
+cd kerbeus
 dpkg-buildpackage -us -uc
+```
+
+The `.deb` package will be created in the parent directory.
+
+#### Install the package:
+```bash
+sudo dpkg -i kerbeus_1.2_amd64.deb
+```
+
+#### Verify installation:
+```bash
+sudo ./kerbeus -h
 ```
 
 ## 🐛 Known Limitations
