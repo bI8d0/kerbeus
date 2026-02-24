@@ -6,6 +6,8 @@
 
 Kerbeus is a specialized packet sniffer designed to capture and analyze Kerberos authentication traffic for security research and penetration testing. It captures AS-REQ and AS-REP messages to extract Pre-Authentication hashes that can be cracked offline with tools like John the Ripper.
 
+<img width="1171" height="821" alt="image" src="https://github.com/user-attachments/assets/c3186a21-6276-462c-bf17-25063ee68678" />
+
 ## 🎯 Purpose
 
 Kerbeus facilitates the security testing of Active Directory environments by:
