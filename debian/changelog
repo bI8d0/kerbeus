@@ -12,4 +12,4 @@ kerbeus (1.2.0-1) unstable; urgency=medium
   * Interactive capture with color-coded output
   * Automatic correlation of AS-REQ and AS-REP packets
 
- -- bI8d0 <bI8d0@protonmail.com>  Sat, 22 Feb 2026 00:00:00 +0000
+ -- bI8d0 <bI8d0@protonmail.com>  Sat, 27 Feb 2026 
