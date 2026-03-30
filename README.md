@@ -36,7 +36,7 @@ Kerbeus facilitates the security testing of Active Directory environments by:
 ## 📋 Requirements
 
 ### System Requirements
-- **OS**: Linux (Kali Linux recommended)
+- **OS**: Linux (Kali Linux or Parrot OS recommended)
 - **Kernel**: AF_PACKET support (standard in modern Linux)
 - **Privileges**: Root/sudo (required for packet capture)
 - **Go Version**: 1.21 or higher
@@ -47,7 +47,7 @@ Kerbeus facilitates the security testing of Active Directory environments by:
 - `golang.org/x/term` - Terminal handling
 - `ettercap` (optional) - For MITM ARP spoofing
 
-### Installation on Kali Linux
+### Installation on Kali Linux or Parrot OS
 ```bash
 sudo apt-get update
 sudo apt-get install -y golang-go ettercap
@@ -375,6 +375,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [RFC 4120 - Kerberos V5](https://tools.ietf.org/html/rfc4120)
 - [John the Ripper - Kerberos Cracking](https://www.openwall.com/john/)
 - [Kali Linux Tools](https://www.kali.org/tools/)
+- [Parrot OS Tools](https://www.parrotsec.org/tools/)
 - [Active Directory Security](https://adsecurity.org/)
 
 ## ⚡ Quick Start Cheatsheet
