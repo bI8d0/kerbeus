@@ -375,7 +375,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [RFC 4120 - Kerberos V5](https://tools.ietf.org/html/rfc4120)
 - [John the Ripper - Kerberos Cracking](https://www.openwall.com/john/)
 - [Kali Linux Tools](https://www.kali.org/tools/)
-- [Parrot OS Tools](https://www.parrotsec.org/tools/)
+- [Parrot OS Tools](https://www.parrotsec.org/)
 - [Active Directory Security](https://adsecurity.org/)
 
 ## ⚡ Quick Start Cheatsheet
