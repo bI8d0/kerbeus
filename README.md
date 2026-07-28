@@ -1,8 +1,6 @@
 # Kerbeus - Kerberos AS-REQ & AS-REP Sniffer
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Go Version](https://img.shields.io/badge/Go-1.24+-blue.svg)](https://golang.org/)
-[![Platform](https://img.shields.io/badge/Platform-Linux-green.svg)](https://www.kernel.org/)
+<p align="center"><a href="https://github.com/bI8d0/kerbeus"><img src="https://img.shields.io/badge/Linux%20%7C%20Go%201.24%20%7C%20MIT%20%7C%20Kerberos%20AS--REQ%2FAS--REP%20Sniffer-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Linux | Go 1.24 | MIT | Kerberos AS-REQ/AS-REP Sniffer"></a></p>
 
 Kerbeus is a specialized packet sniffer designed to capture and analyze Kerberos authentication traffic for security research and penetration testing. It captures AS-REQ and AS-REP messages to extract Pre-Authentication hashes that can be cracked offline with tools like John the Ripper.
 
